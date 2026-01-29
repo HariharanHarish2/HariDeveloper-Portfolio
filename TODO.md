@@ -1,0 +1,8 @@
+- [ ] Create Layout component
+- [ ] Move theme styles to global CSS
+- [ ] Update all sections to purple gradient background
+- [ ] Add page transition animations
+- [ ] Enhance About section with profile image and content
+- [ ] Add animations to Skills, Projects, Experience, Contact sections
+- [ ] Ensure responsive design
+- [ ] Test all changes
