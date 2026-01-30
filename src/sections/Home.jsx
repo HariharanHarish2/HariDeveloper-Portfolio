@@ -6,8 +6,9 @@ import Scene from '../three/Scene'
 
 const Home = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0D0D0D] to-[#1A1A1A] relative">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.15)_0%,transparent_70%)] pointer-events-none"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
           <motion.div
@@ -24,7 +25,7 @@ const Home = () => {
             >
               Hi, I'm{' '}
               <motion.span
-                className="bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent"
+                className="text-transparent bg-clip-text bg-gradient-to-r from-[#F97316] to-[#FB923C]"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -35,7 +36,7 @@ const Home = () => {
             </motion.h1>
 
             <motion.p
-              className="text-xl text-white/80 mb-8"
+              className="text-xl text-[#CFCFCF] mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -51,16 +52,16 @@ const Home = () => {
             >
               <motion.a
                 href="#projects"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-blue-500/25"
-                whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(37, 99, 235, 0.3)" }}
+                className="bg-gradient-to-r from-[#F97316] to-[#FB923C] text-white px-8 py-3 rounded-lg font-medium hover:scale-105 hover:shadow-orange-500/40 transition duration-300 shadow-lg"
+                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(249, 115, 22, 0.5)" }}
                 whileTap={{ scale: 0.95 }}
               >
                 View My Work
               </motion.a>
               <motion.a
                 href="#contact"
-                className="border border-teal-400 text-teal-400 px-8 py-3 rounded-lg font-medium hover:bg-teal-400 hover:text-slate-900 transition-all duration-200 shadow-lg hover:shadow-teal-500/25"
-                whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(20, 184, 166, 0.3)" }}
+                className="border border-[#FB923C] text-[#FB923C] px-8 py-3 rounded-lg font-medium hover:bg-[#FB923C] hover:text-[#0D0D0D] transition-all duration-300 shadow-lg hover:shadow-orange-500/25"
+                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(251, 146, 60, 0.3)" }}
                 whileTap={{ scale: 0.95 }}
               >
                 Get In Touch

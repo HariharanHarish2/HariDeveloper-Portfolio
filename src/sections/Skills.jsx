@@ -29,12 +29,12 @@ const Skills = () => {
   }
 
   return (
-    <section id="skills" className="py-20 relative overflow-hidden">
+    <section id="skills" className="py-20 relative overflow-hidden bg-gradient-to-br from-[#0D0D0D] to-[#1A1A1A]">
       {/* Animated background blobs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-teal-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
-        <div className="absolute top-40 left-1/2 w-80 h-80 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-orange-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
+        <div className="absolute top-40 left-1/2 w-80 h-80 bg-orange-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -57,7 +57,7 @@ const Skills = () => {
             viewport={{ once: true }}
           >
             <motion.h3
-              className="text-3xl font-semibold text-white mb-8"
+              className="text-3xl font-semibold text-[#FFFFFF] mb-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -75,13 +75,12 @@ const Skills = () => {
                   viewport={{ once: true }}
                 >
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-white/90 font-medium">{skill.name}</span>
-                    <span className="text-white/70">{skill.level}%</span>
+                    <span className="text-[#CFCFCF] font-medium">{skill.name}</span>
+                    <span className="text-[#9CA3AF]">{skill.level}%</span>
                   </div>
-                  <div className="w-full bg-white/20 rounded-full h-3">
+                  <div className="w-full bg-orange-500/20 rounded-full h-3">
                     <motion.div
-                      className="h-3 rounded-full"
-                      style={{ backgroundColor: skill.color }}
+                      className="h-3 rounded-full bg-gradient-to-r from-[#F97316] to-[#FB923C]"
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}
                       transition={{ duration: 1.5, delay: index * 0.1 + 0.4 }}

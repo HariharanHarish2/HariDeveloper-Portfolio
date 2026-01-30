@@ -18,7 +18,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass m-4 rounded-2xl">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0D0D0D]/60 backdrop-blur-xl border border-orange-500/20 m-4 rounded-2xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <motion.div
@@ -27,7 +27,7 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-2xl font-bold text-white">Portfolio</h1>
+            <h1 className="text-2xl font-bold text-[#FFFFFF]">Portfolio</h1>
           </motion.div>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -35,7 +35,7 @@ const Navbar = () => {
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-white/80 hover:text-white px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 hover:bg-white/10"
+                className="text-[#CFCFCF] hover:text-[#FB923C] px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:bg-orange-500/10"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -44,8 +44,8 @@ const Navbar = () => {
             ))}
             <motion.button
               onClick={handleDownloadResume}
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-xl text-sm font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-200 card-3d"
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(147, 51, 234, 0.3)" }}
+              className="bg-gradient-to-r from-[#F97316] to-[#FB923C] text-white px-4 py-2 rounded-xl text-sm font-medium hover:scale-105 hover:shadow-orange-500/40 transition duration-300 card-3d"
+              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(249, 115, 22, 0.5)" }}
               whileTap={{ scale: 0.95 }}
             >
               📄 Resume
@@ -73,7 +73,7 @@ const Navbar = () => {
 
       {isOpen && (
         <motion.div
-          className="md:hidden glass-dark m-4 rounded-xl"
+          className="md:hidden bg-[#0D0D0D]/90 backdrop-blur-xl border border-orange-500/20 m-4 rounded-xl"
           initial={{ opacity: 0, y: -20, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: -20, scale: 0.95 }}
@@ -84,7 +84,7 @@ const Navbar = () => {
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-white/80 hover:text-white block px-3 py-3 rounded-xl text-base font-medium hover:bg-white/10 transition-all duration-200"
+                className="text-[#CFCFCF] hover:text-[#FB923C] block px-3 py-3 rounded-xl text-base font-medium hover:bg-orange-500/10 transition-all duration-300"
                 onClick={() => setIsOpen(false)}
                 whileHover={{ scale: 1.02, x: 5 }}
               >
@@ -96,8 +96,8 @@ const Navbar = () => {
                 handleDownloadResume()
                 setIsOpen(false)
               }}
-              className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-3 rounded-xl text-base font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-200 card-3d"
-              whileHover={{ scale: 1.02, boxShadow: "0 10px 30px rgba(147, 51, 234, 0.3)" }}
+              className="w-full bg-gradient-to-r from-[#F97316] to-[#FB923C] text-white px-3 py-3 rounded-xl text-base font-medium hover:scale-105 hover:shadow-orange-500/40 transition duration-300 card-3d"
+              whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(249, 115, 22, 0.5)" }}
               whileTap={{ scale: 0.95 }}
             >
               📄 Download Resume

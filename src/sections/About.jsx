@@ -1,14 +1,15 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
+
 const About = () => {
   return (
-    <section id="about" className="py-20 relative overflow-hidden">
+    <section id="about" className="py-20 relative overflow-hidden bg-gradient-to-br from-[#0D0D0D] to-[#1A1A1A]">
       {/* Animated background blobs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-teal-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
-        <div className="absolute top-40 left-1/2 w-80 h-80 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-orange-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
+        <div className="absolute top-40 left-1/2 w-80 h-80 bg-orange-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -19,8 +20,8 @@ const About = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl font-bold text-white mb-4 drop-shadow-lg">About Me</h2>
-          <p className="text-xl text-white/80">Get to know me better</p>
+          <h2 className="text-5xl font-bold text-[#FFFFFF] mb-4 drop-shadow-lg">About Me</h2>
+          <p className="text-xl text-[#CFCFCF]">Get to know me better</p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -34,19 +35,17 @@ const About = () => {
           >
             <motion.div
               className="relative"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(59, 130, 246, 0.5)" }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white/20">
+              <div className="w-[350px] h-[350px] rounded-full border-4 border-white/20 overflow-hidden shadow-lg">
                 <img
-                  src="/profile.jpg"
-                  alt="Profile"
+                  src="/hari.jpg"
+                  alt="Hariharan"
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.src = "https://via.placeholder.com/320x320/667eea/ffffff?text=Your+Photo"
-                  }}
                 />
               </div>
+
               <motion.div
                 className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-500 to-teal-500 rounded-full flex items-center justify-center shadow-lg"
                 animate={{ rotate: 360 }}

@@ -35,12 +35,12 @@ const Projects = () => {
   ]
 
   return (
-    <section id="projects" className="py-20 relative overflow-hidden">
+    <section id="projects" className="py-20 relative overflow-hidden bg-gradient-to-br from-[#0D0D0D] to-[#1A1A1A]">
       {/* Animated background blobs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-teal-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
-        <div className="absolute top-40 left-1/2 w-80 h-80 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-orange-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
+        <div className="absolute top-40 left-1/2 w-80 h-80 bg-orange-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -68,13 +68,13 @@ const Projects = () => {
             >
               <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
-                <p className="text-white/80 mb-4">{project.description}</p>
+                <h3 className="text-xl font-semibold text-[#FFFFFF] mb-2">{project.title}</h3>
+                <p className="text-[#CFCFCF] mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-white/20 text-white px-2 py-1 rounded-full text-sm"
+                      className="bg-orange-500/20 text-[#FB923C] px-2 py-1 rounded-full text-sm border border-orange-500/30"
                     >
                       {tech}
                     </span>

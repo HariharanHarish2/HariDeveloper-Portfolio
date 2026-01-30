@@ -27,12 +27,12 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="py-20 relative overflow-hidden">
+    <section id="experience" className="py-20 relative overflow-hidden bg-gradient-to-br from-[#0D0D0D] to-[#1A1A1A]">
       {/* Animated background blobs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-teal-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
-        <div className="absolute top-40 left-1/2 w-80 h-80 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-orange-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
+        <div className="absolute top-40 left-1/2 w-80 h-80 bg-orange-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -61,14 +61,14 @@ const Experience = () => {
                 viewport={{ once: true }}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-6 w-4 h-4 bg-indigo-600 rounded-full border-4 border-white shadow-lg"></div>
+                <div className="absolute left-6 w-4 h-4 bg-[#F97316] rounded-full border-4 border-white shadow-lg"></div>
 
                 {/* Content */}
                 <motion.div
                   className="ml-16 glass rounded-3xl p-6 card-3d"
                   whileHover={{
                     scale: 1.02,
-                    boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)",
+                    boxShadow: "0 0 30px rgba(249, 115, 22, 0.3)",
                     y: -5
                   }}
                   initial={{ opacity: 0, y: 20 }}
@@ -76,15 +76,15 @@ const Experience = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <h3 className="text-xl font-semibold text-white mb-1">{exp.title}</h3>
-                  <h4 className="text-white/90 font-medium mb-2">{exp.company}</h4>
-                  <p className="text-white/70 text-sm mb-4">{exp.period}</p>
-                  <p className="text-white/90 mb-4">{exp.description}</p>
+                  <h3 className="text-xl font-semibold text-[#FFFFFF] mb-1">{exp.title}</h3>
+                  <h4 className="text-[#CFCFCF] font-medium mb-2">{exp.company}</h4>
+                  <p className="text-[#9CA3AF] text-sm mb-4">{exp.period}</p>
+                  <p className="text-[#CFCFCF] mb-4">{exp.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="bg-white/20 text-white px-2 py-1 rounded-full text-sm"
+                        className="bg-orange-500/20 text-[#FB923C] px-2 py-1 rounded-full text-sm border border-orange-500/30"
                       >
                         {tech}
                       </span>

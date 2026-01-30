@@ -64,12 +64,12 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden">
+    <section id="contact" className="py-20 relative overflow-hidden bg-gradient-to-br from-[#0D0D0D] to-[#1A1A1A]">
       {/* Animated background blobs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
-        <div className="absolute top-40 left-1/2 w-80 h-80 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-orange-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
+        <div className="absolute top-40 left-1/2 w-80 h-80 bg-orange-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 blob"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -143,7 +143,7 @@ const Contact = () => {
               <h3 className="text-2xl font-semibold text-white mb-6">Send Message</h3>
 
               <div className="mb-6">
-                <label htmlFor="name" className="block text-slate-100 font-medium mb-2">
+                <label htmlFor="name" className="block text-[#FFFFFF] font-medium mb-2">
                   Full Name
                 </label>
                 <motion.input
@@ -153,13 +153,13 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 bg-[#141414] border border-orange-500/30 text-[#FFFFFF] placeholder-[#9CA3AF] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FB923C] focus:border-transparent transition-all duration-200"
                   whileFocus={{ scale: 1.02 }}
                 />
               </div>
 
               <div className="mb-6">
-                <label htmlFor="email" className="block text-slate-100 font-medium mb-2">
+                <label htmlFor="email" className="block text-[#FFFFFF] font-medium mb-2">
                   Email Address
                 </label>
                 <motion.input
@@ -169,13 +169,13 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 bg-[#141414] border border-orange-500/30 text-[#FFFFFF] placeholder-[#9CA3AF] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FB923C] focus:border-transparent transition-all duration-200"
                   whileFocus={{ scale: 1.02 }}
                 />
               </div>
 
               <div className="mb-6">
-                <label htmlFor="subject" className="block text-slate-100 font-medium mb-2">
+                <label htmlFor="subject" className="block text-[#FFFFFF] font-medium mb-2">
                   Subject
                 </label>
                 <motion.input
@@ -185,13 +185,13 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 bg-[#141414] border border-orange-500/30 text-[#FFFFFF] placeholder-[#9CA3AF] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FB923C] focus:border-transparent transition-all duration-200"
                   whileFocus={{ scale: 1.02 }}
                 />
               </div>
 
               <div className="mb-6">
-                <label htmlFor="message" className="block text-slate-100 font-medium mb-2">
+                <label htmlFor="message" className="block text-[#FFFFFF] font-medium mb-2">
                   Message
                 </label>
                 <motion.textarea
@@ -201,17 +201,17 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows="5"
-                  className="w-full px-4 py-3 bg-slate-800 border border-slate-600 text-slate-100 placeholder-slate-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+                  className="w-full px-4 py-3 bg-[#141414] border border-orange-500/30 text-[#FFFFFF] placeholder-[#9CA3AF] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FB923C] focus:border-transparent transition-all duration-200 resize-none"
                   whileFocus={{ scale: 1.02 }}
                 />
               </div>
 
               <motion.button
                 type="submit"
-                className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition-colors duration-200"
+                className="w-full bg-gradient-to-r from-[#F97316] to-[#FB923C] text-white py-3 px-6 rounded-lg font-medium hover:scale-105 hover:shadow-orange-500/40 focus:outline-none focus:ring-2 focus:ring-[#FB923C] focus:ring-offset-2 transition duration-300"
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: "0 10px 30px rgba(139, 92, 246, 0.5)"
+                  boxShadow: "0 0 30px rgba(249, 115, 22, 0.5)"
                 }}
                 whileTap={{ scale: 0.95 }}
               >
